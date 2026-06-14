@@ -224,19 +224,19 @@ export default function LandingPage() {
           {/* Stats */}
           <div className="mt-12 flex flex-wrap gap-6">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900">{stats.alumni.toLocaleString()}+</h3>
+              <h3 className="text-2xl font-bold text-gray-900">{(stats.alumni ?? 0).toLocaleString()}+</h3>
               <p className="text-gray-500 text-sm">Active Alumni</p>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900">{stats.students.toLocaleString()}+</h3>
+              <h3 className="text-2xl font-bold text-gray-900">{(stats.students ?? 0).toLocaleString()}+</h3>
               <p className="text-gray-500 text-sm">Students</p>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900">{stats.faculty.toLocaleString()}+</h3>
+              <h3 className="text-2xl font-bold text-gray-900">{(stats.faculty ?? 0).toLocaleString()}+</h3>
               <p className="text-gray-500 text-sm">Faculty Members</p>
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900">{stats.satisfaction}%</h3>
+              <h3 className="text-2xl font-bold text-gray-900">{(stats.satisfaction ?? 0).toLocaleString()}%</h3>
               <p className="text-gray-500 text-sm">User Satisfaction</p>
             </div>
           </div>

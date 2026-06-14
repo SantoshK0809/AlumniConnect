@@ -274,7 +274,7 @@ const ProfilePage = ({ externalProfile }) => {
               ].map((stat, idx) => (
                 <div key={idx} className="text-center px-4">
                   <p className={`text-2xl font-bold ${stat.color} tracking-tight`}>
-                    {stat.value.toLocaleString()}
+                    {/* {stat.value.toLocaleString()} */} {(stat.value ?? 0).toLocaleString()}
                   </p>
                   <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mt-1">
                     {stat.label}

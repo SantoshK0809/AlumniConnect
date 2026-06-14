@@ -305,7 +305,7 @@ const RoleDashboard = () => {
              <h3 className="text-xs font-black text-gray-400 uppercase tracking-[0.2em] mb-3">{stat.label}</h3>
              <div className="flex items-end justify-between">
                <span className={`text-4xl font-black text-gray-900 ${theme.textHover} transition-colors`}>
-                 {stat.value.toLocaleString()}
+                 {(stat.value ?? 0).toLocaleString()}
                </span>
                <div className={`p-2 rounded-xl ${theme.statBg} ${theme.statText} ${theme.statBgHover} group-hover:text-white transition-all`}>
                   <ChartBarIcon className="w-5 h-5" />
