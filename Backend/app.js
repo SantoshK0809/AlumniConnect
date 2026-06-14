@@ -35,7 +35,8 @@ const { globalErrorHandler } = require("./middlewares/errorMiddleware");
 
 // ── CONFIG ──────────────────────────────────────────────────────────
 const PORT = process.env.PORT || 4000;
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/AlumniPortalDB";
+const MONGODB_URI = process.env.MONGODB_URI;
+// const MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/AlumniPortalDB";
 const CORS_ORIGINS = process.env.CORS_ORIGINS
   ? process.env.CORS_ORIGINS.split(",")
   : ["http://localhost:5173", "http://localhost:5174"];
