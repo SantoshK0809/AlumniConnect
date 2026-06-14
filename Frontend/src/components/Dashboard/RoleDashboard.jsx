@@ -200,6 +200,13 @@ const RoleDashboard = () => {
   const handleStatClick = (label) => {
     const l = label.toLowerCase();
     const basePath = getRoleBasePath();
+    
+    // Handle admin stats mapping
+    if (role === 'admin' || l.includes("user") || l.includes("student") || l.includes("alumni") || l.includes("teacher")) {
+      navigate(`${getRoleBasePath()}/manage`);
+      return;
+    }
+
     if (l.includes("post")) navigate(`${basePath}/feed`);
     else if (l.includes("connection")) navigate(`${basePath}/directory`);
     else navigate(`${basePath}/profile`);

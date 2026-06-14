@@ -628,5 +628,46 @@
     "prn_number": "78071020G",
     "name": "Santosh Kirtane",
     "email": "santosh080904@gmail.com"
+  },
+  {
+    "role": "student",
+    "prn_number": "72235300G",
+    "name": "Sumit Mane",
+    "email": "spatil4261@gmail.com"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "72245400H",
+    "name": "Pavan Salunkhe",
+    "email": "pavansalunkhe17@gmail.com"
+  },
+  {
+    "role": "student",
+    "prn_number": "72235340H",
+    "name": "Santosh Kirtane",
+    "email": "santosh080904@gmail.com"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "72235210H",
+    "name": "Shruti Gore",
+    "email": "goreshruti2004@gmail.com"
+  },
+  {
+    "role": "student",
+    "prn_number": "72235150L",
+    "name": "Priya Bhor",
+    "email": "priyabhor2404@gmail.com"
+  },
+  {
+    "role": "alumni",
+    "name": "Nitish Thakur",
+    "email": "thakurnitish112@gmail.com"
+  },
+  {
+    "role": "student",
+    "prn_number": "72235391L",
+    "name": "Neha Rajiwade",
+    "email": "rajiwadeneha@gmail.com"
   }
 ]

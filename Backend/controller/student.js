@@ -118,13 +118,11 @@ async function handleInsertDataToStudentModel(req, res) {
     const allowed = [
       "department",
       "bio",
-      "achievements",
       "batch",
       "course",
       "address",
       "contact",
       "currentYear",
-      "skills",
     ];
 
     allowed.forEach((field) => {
@@ -133,19 +131,26 @@ async function handleInsertDataToStudentModel(req, res) {
       }
     });
 
-    if (req.body.skills) {
-      student.skills = handleAddRemoveArray(
-        student.skills || [],
-        req.body.skills
-      );
-    }
+    const parseArrayField = (fieldName) => {
+      if (req.body[fieldName]) {
+        try {
+          // Attempt to parse as JSON if it's sent as a stringified array
+          const parsed = JSON.parse(req.body[fieldName]);
+          if (Array.isArray(parsed)) {
+            student[fieldName] = parsed;
+          }
+        } catch (e) {
+          // Fallback if it's somehow not JSON, split by comma if it's a string
+          if (typeof req.body[fieldName] === "string") {
+            student[fieldName] = req.body[fieldName].split(',').map(s => s.trim()).filter(Boolean);
+          }
+        }
+      }
+    };
 
-    if (req.body.achievements) {
-      student.achievements = handleAddRemoveArray(
-        student.achievements || [],
-        req.body.achievements
-      );
-    }
+    parseArrayField("skills");
+    parseArrayField("achievements");
+    parseArrayField("projects");
 
     await student.save();
 

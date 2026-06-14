@@ -370,6 +370,15 @@ const AppRoutes = () => {
           }
         />
         <Route
+          path="admin/profile"
+          element={
+            <ProtectedRoute
+              allowedRoles={["Admin"]}
+              children={withDashboardLayout(<AdminProfile />)}
+            />
+          }
+        />
+        <Route
           path="admin/feed"
           element={
             <ProtectedRoute
@@ -411,6 +420,15 @@ const AppRoutes = () => {
             <ProtectedRoute
               allowedRoles={["Admin"]}
               children={withDashboardLayout(<JobBoard />)}
+            />
+          }
+        />
+        <Route
+          path="admin/jobs/create"
+          element={
+            <ProtectedRoute
+              allowedRoles={["Admin"]}
+              children={withDashboardLayout(<PostJob />)}
             />
           }
         />

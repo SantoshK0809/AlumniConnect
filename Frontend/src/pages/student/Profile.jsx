@@ -124,7 +124,7 @@ const ProfilePage = ({ externalProfile }) => {
             Back to Profile
           </button>
           <div className="bg-white rounded-3xl shadow-xl shadow-indigo-100/50 border border-gray-100 p-8">
-            <StudentProfileForm />
+            <StudentProfileForm initialData={profile} />
           </div>
         </div>
       </motion.div>
@@ -326,7 +326,10 @@ const ProfilePage = ({ externalProfile }) => {
                 Skills
               </h3>
               <div className="flex flex-wrap gap-2">
-                {profile?.skills?.map((s, i) => (
+                {profile?.skills
+                  ?.flatMap((s) => typeof s === 'string' ? s.split(',').map((skill) => skill.trim()) : s)
+                  ?.filter(Boolean)
+                  ?.map((s, i) => (
                   <motion.span
                     key={i}
                     whileHover={{ y: -2 }}
