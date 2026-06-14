@@ -1,0 +1,632 @@
+[
+  {
+    "role": "alumni",
+    "prn_number": "78071028K",
+    "name": "Sumit Patil",
+    "email": "sumit07@gmail.com"
+  },
+  {
+    "role": "student",
+    "prn_number": "78451098K",
+    "name": "Pavan Patil",
+    "email": "pavan17@gmail.com"
+  },
+  {
+    "role": "student",
+    "prn_number": "78031098K",
+    "name": "Shahid Inamdar",
+    "email": "shahid@gmail.com"
+  },
+  {
+    "role": "student",
+    "prn_number": "78034598K",
+    "name": "Nitish Patel",
+    "email": "nitish@gmail.com"
+  },
+  {
+    "role": "student",
+    "prn_number": "78458998K",
+    "name": "Ajinkya Patil",
+    "email": "ajinkya@gmail.com"
+  },
+  {
+    "role": "student",
+    "prn_number": "78451028K",
+    "name": "Aarav Patil",
+    "email": "aaravpatil0@gmail.com"
+  },
+  {
+    "role": "teacher",
+    "employe_id": "27691028T",
+    "name": "Swati Joshi",
+    "email": "swatijoshi1@yahoo.com"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "78391028H",
+    "name": "Sumit Kadam",
+    "email": "sumitkadam2@outlook.com"
+  },
+  {
+    "role": "student",
+    "prn_number": "78541028J",
+    "name": "Pavan Pawar",
+    "email": "pavanpawar3@gmail.com"
+  },
+  {
+    "role": "teacher",
+    "employe_id": "27821028L",
+    "name": "Meera Sharma",
+    "email": "meerasharma4@college.edu"
+  },
+  {
+    "role": "student",
+    "prn_number": "78671028F",
+    "name": "Rohan Deshmukh",
+    "email": "rohandeshmukh5@gmail.com"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "78241028A",
+    "name": "Isha Chavan",
+    "email": "ishachavan6@outlook.com"
+  },
+  {
+    "role": "teacher",
+    "employe_id": "27751028M",
+    "name": "Aditya Naik",
+    "email": "adityanaik7@gmail.com"
+  },
+  {
+    "role": "student",
+    "prn_number": "78821028C",
+    "name": "Priya Kale",
+    "email": "priyakale8@college.edu"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "78931028B",
+    "name": "Kunal Mishra",
+    "email": "kunalmishra9@yahoo.com"
+  },
+  {
+    "role": "teacher",
+    "employe_id": "27941028R",
+    "name": "Amit Patil",
+    "email": "amitpatil10@gmail.com"
+  },
+  {
+    "role": "student",
+    "prn_number": "78111028X",
+    "name": "Tanvi Ghosh",
+    "email": "tanvighosh11@outlook.com"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "78421028V",
+    "name": "Riya Kadam",
+    "email": "riyakadam12@gmail.com"
+  },
+  {
+    "role": "teacher",
+    "employe_id": "27891028N",
+    "name": "Manish Sharma",
+    "email": "manishsharma13@yahoo.com"
+  },
+  {
+    "role": "student",
+    "prn_number": "78691028E",
+    "name": "Sneha Joshi",
+    "email": "snehajoshi14@college.edu"
+  },
+  {
+    "role": "teacher",
+    "employe_id": "27651028G",
+    "name": "Kritika Reddy",
+    "email": "kritikareddy15@outlook.com"
+  },
+  {
+    "role": "student",
+    "prn_number": "78231028H",
+    "name": "Rohan Pawar",
+    "email": "rohanpawar16@gmail.com"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "78721028L",
+    "name": "Pooja Deshmukh",
+    "email": "poojadeshmukh17@college.edu"
+  },
+  {
+    "role": "student",
+    "prn_number": "786492568K",
+    "name": "Prakash Nair",
+    "email": "prakash26@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "785765554K",
+    "name": "Rohan Menon",
+    "email": "rohan542@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "781237708K",
+    "name": "Prakash Joshi",
+    "email": "prakash711@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "787949891K",
+    "name": "Rohit Pawar",
+    "email": "rohit459@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "785144044K",
+    "name": "Rohit Pawar",
+    "email": "rohit924@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "783232544K",
+    "name": "Kunal Kumar",
+    "email": "kunal731@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "789229423K",
+    "name": "Pooja Verma",
+    "email": "pooja151@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "785914814K",
+    "name": "Vikram Chaudhary",
+    "email": "vikram843@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "784815078K",
+    "name": "Anil Kadam",
+    "email": "anil748@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "781894039K",
+    "name": "Priya Patel",
+    "email": "priya653@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "781675454K",
+    "name": "Sanjay Iyer",
+    "email": "sanjay333@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "785662991K",
+    "name": "Rohan Verma",
+    "email": "rohan810@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "783846647K",
+    "name": "Manoj Gupta",
+    "email": "manoj710@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "783282053K",
+    "name": "Ishaan Reddy",
+    "email": "ishaan63@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "783384950K",
+    "name": "Siddharth Deshmukh",
+    "email": "siddharth296@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "788015009K",
+    "name": "Aarav Sharma",
+    "email": "aarav48@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "785894481K",
+    "name": "Prakash Singh",
+    "email": "prakash621@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "789454434K",
+    "name": "Arjun Chaudhary",
+    "email": "arjun790@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "787489134K",
+    "name": "Priya Chaudhary",
+    "email": "priya794@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "784022465K",
+    "name": "Suresh Das",
+    "email": "suresh223@student.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "786570566K",
+    "name": "Swati Chaudhary",
+    "email": "swati164@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "787920849K",
+    "name": "Kunal Sharma",
+    "email": "kunal405@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "783997823K",
+    "name": "Ishaan Kadam",
+    "email": "ishaan295@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "786564066K",
+    "name": "Arjun Kale",
+    "email": "arjun468@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "789202257K",
+    "name": "Manish Bose",
+    "email": "manish170@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "787494522K",
+    "name": "Tanvi Chavan",
+    "email": "tanvi326@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "785333569K",
+    "name": "Sunil Gupta",
+    "email": "sunil425@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "783350188K",
+    "name": "Sunil Patel",
+    "email": "sunil160@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "783042613K",
+    "name": "Aarav Gupta",
+    "email": "aarav749@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "785055697K",
+    "name": "Pooja Pawar",
+    "email": "pooja49@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "786126526K",
+    "name": "Rohan Sharma",
+    "email": "rohan71@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "786015300K",
+    "name": "Aarav Verma",
+    "email": "aarav299@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "784117995K",
+    "name": "Anil Sharma",
+    "email": "anil594@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "788934612K",
+    "name": "Mahesh Patil",
+    "email": "mahesh30@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "781478647K",
+    "name": "Kiran Menon",
+    "email": "kiran833@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "782021608K",
+    "name": "Meera Reddy",
+    "email": "meera978@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "783850271K",
+    "name": "Siddharth Bose",
+    "email": "siddharth607@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "789887280K",
+    "name": "Prakash Mishra",
+    "email": "prakash822@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "787139093K",
+    "name": "Anil Menon",
+    "email": "anil318@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "789761110K",
+    "name": "Sanjay Desai",
+    "email": "sanjay609@alumni.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "785059271K",
+    "name": "Sanjay Desai",
+    "email": "sanjay923@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "786821728K",
+    "name": "Sunil Menon",
+    "email": "sunil593@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "787507958K",
+    "name": "Prakash Das",
+    "email": "prakash588@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "788195409K",
+    "name": "Ravi Das",
+    "email": "ravi604@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "781749159K",
+    "name": "Rohan Reddy",
+    "email": "rohan81@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "782327082K",
+    "name": "Tanvi Gupta",
+    "email": "tanvi851@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "784688484K",
+    "name": "Suresh Menon",
+    "email": "suresh613@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "787264172K",
+    "name": "Mahesh Singh",
+    "email": "mahesh536@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "789140848K",
+    "name": "Harsh Iyer",
+    "email": "harsh902@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "786276123K",
+    "name": "Kiran Bhat",
+    "email": "kiran658@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "785342831K",
+    "name": "Aditya Nair",
+    "email": "aditya149@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "781161182K",
+    "name": "Yash Kumar",
+    "email": "yash696@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "783353606K",
+    "name": "Mahesh Menon",
+    "email": "mahesh201@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "784830365K",
+    "name": "Neha Mishra",
+    "email": "neha318@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "788054628K",
+    "name": "Amit Mishra",
+    "email": "amit916@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "782144867K",
+    "name": "Vivek Iyer",
+    "email": "vivek987@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "785904256K",
+    "name": "Pooja Verma",
+    "email": "pooja333@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "789944165K",
+    "name": "Priya Chavan",
+    "email": "priya22@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "787898392K",
+    "name": "Sunil Kadam",
+    "email": "sunil325@student.test"
+  },
+  {
+    "role": "student",
+    "prn_number": "786178989K",
+    "name": "Aarav Chaudhary",
+    "email": "aarav216@student.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "782883691K",
+    "name": "Manish Pawar",
+    "email": "manish525@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "789169428K",
+    "name": "Sunil Bose",
+    "email": "sunil382@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "789189820K",
+    "name": "Aditya Patil",
+    "email": "aditya500@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "785976112K",
+    "name": "Sanjay Kale",
+    "email": "sanjay466@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "785418013K",
+    "name": "Suresh Iyer",
+    "email": "suresh993@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "782446734K",
+    "name": "Amit Ghosh",
+    "email": "amit677@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "783986750K",
+    "name": "Swati Bose",
+    "email": "swati551@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "783754570K",
+    "name": "Ravi Kale",
+    "email": "ravi32@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "789581765K",
+    "name": "Aarav Kumar",
+    "email": "aarav189@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "782014634K",
+    "name": "Meera Chavan",
+    "email": "meera793@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "789352655K",
+    "name": "Kavita Desai",
+    "email": "kavita722@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "783484696K",
+    "name": "Aarav Rao",
+    "email": "aarav931@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "783214261K",
+    "name": "Manish Sharma",
+    "email": "manish835@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "784501642K",
+    "name": "Siddharth Reddy",
+    "email": "siddharth816@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "785250114K",
+    "name": "Harsh Patil",
+    "email": "harsh308@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "783770355K",
+    "name": "Priya Nair",
+    "email": "priya893@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "787202606K",
+    "name": "Vikram Chavan",
+    "email": "vikram869@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "782996858K",
+    "name": "Rajesh Joshi",
+    "email": "rajesh925@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "788152930K",
+    "name": "Ramesh Desai",
+    "email": "ramesh62@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "783601858K",
+    "name": "Aarav Verma",
+    "email": "aarav394@alumni.test"
+  },
+  {
+    "role": "alumni",
+    "prn_number": "78071029K",
+    "name": "Sumit Patil",
+    "email": "spatil4261@gmail.com"
+  },
+  {
+    "role": "student",
+    "prn_number": "78071020G",
+    "name": "Santosh Kirtane",
+    "email": "santosh080904@gmail.com"
+  }
+]
