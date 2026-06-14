@@ -268,7 +268,7 @@ const AlumniProfile = ({ externalProfile }) => {
                   onClick={stat.clickable ? stat.action : undefined}
                 >
                   <p className={`text-3xl font-black ${stat.color} transition-transform group-hover:scale-110`}>
-                    {stat.value.toLocaleString()}
+                    {/* {stat.value.toLocaleString()} */} {(stat.value ?? 0).toLocaleString()}
                   </p>
                   <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">
                     {stat.label}
