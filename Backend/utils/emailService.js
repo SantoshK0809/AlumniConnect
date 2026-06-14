@@ -1,13 +1,30 @@
 const nodemailer = require("nodemailer");
 
-// Create reusable transporter object using the default SMTP transport
-const transporter = nodemailer.createTransport({
-  service: "gmail", // You can use other services or generic SMTP config
-  auth: {
-    user: process.env.EMAIL_USER, 
-    pass: process.env.EMAIL_PASS, 
-  },
-});
+// Check environment
+const isProduction = process.env.NODE_ENV === "production";
+
+// Create reusable transporter object
+let transporter;
+
+if (isProduction) {
+  transporter = nodemailer.createTransport({
+    host: "smtp-relay.brevo.com",
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: process.env.BREVO_SMTP_USER,
+      pass: process.env.BREVO_SMTP_PASS,
+    },
+  });
+} else {
+  transporter = nodemailer.createTransport({
+    service: "gmail", 
+    auth: {
+      user: process.env.EMAIL_USER, 
+      pass: process.env.EMAIL_PASS, 
+    },
+  });
+}
 
 /**
  * Sends an email using nodemailer
@@ -17,13 +34,16 @@ const transporter = nodemailer.createTransport({
  */
 const sendEmail = async (to, subject, htmlContent) => {
   try {
-    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    const activeUser = isProduction ? process.env.BREVO_SMTP_USER : process.env.EMAIL_USER;
+    const activePass = isProduction ? process.env.BREVO_SMTP_PASS : process.env.EMAIL_PASS;
+
+    if (!activeUser || !activePass) {
       console.warn("Email config missing. Skipping email send to:", to);
       return;
     }
 
     const info = await transporter.sendMail({
-      from: `"AlumniConnect" <${process.env.EMAIL_USER}>`,
+      from: `"AlumniConnect" <${activeUser}>`,
       to,
       subject,
       html: htmlContent,

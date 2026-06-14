@@ -34,7 +34,7 @@ const studentSchema = new mongoose.Schema(
 
     bio: { type: String, default: "" },
     skills: { type: [String], default: [] },
-    projects: { type: [String], default: [] },
+    projects: { type: [{ title: String, description: String }], default: [] },
     achievements: { type: [String], default: [] },
 
     verified: { type: Boolean, default: false },

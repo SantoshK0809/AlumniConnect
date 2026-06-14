@@ -8,22 +8,23 @@ import {
 } from "../../constants/profileOptions";
 import server from "../../../environment.js";
 
-const StudentProfileForm = () => {
+const StudentProfileForm = ({ initialData = {} }) => {
   const { user, login } = useAuth();
   const [form, setForm] = useState({
-    department: "",
-    address: "",
-    currentYear: "",
-    projects: "",
-    bio: "",
-    skills: "",
-    achievements: "",
-    batch: "",
-    course: "",
-    contact: "",
+    department: initialData.department || "",
+    address: initialData.address || "",
+    currentYear: initialData.currentYear || "",
+    bio: initialData.bio || "",
+    skills: Array.isArray(initialData.skills) ? initialData.skills.flatMap(s => typeof s === 'string' ? s.split(',').map(skill => skill.trim()) : s).filter(Boolean) : (initialData.skills ? initialData.skills.split(',').map(skill => skill.trim()).filter(Boolean) : []),
+    achievements: Array.isArray(initialData.achievements) ? initialData.achievements : [],
+    projects: Array.isArray(initialData.projects) ? initialData.projects : [],
+    batch: initialData.batch || "",
+    course: initialData.course || "",
+    contact: initialData.contact || "",
   });
 
-  //const [achievementInput, setAchievementInput] = useState("");
+  const [achievementInput, setAchievementInput] = useState("");
+  const [projectInput, setProjectInput] = useState({ title: "", description: "" });
   const [profileImage, setProfileImage] = useState(null);
   const [coverImage, setCoverImage] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -67,14 +68,36 @@ const StudentProfileForm = () => {
 
 
   // Add Achievement
-  // const addAchievement = () => {
-  //   if (!achievementInput.trim()) return;
-  //   setForm({
-  //     ...form,
-  //     achievements: [...form.achievements, achievementInput],
-  //   });
-  //   setAchievementInput("");
-  // };
+  const addAchievement = () => {
+    if (!achievementInput.trim()) return;
+    setForm({
+      ...form,
+      achievements: [...form.achievements, achievementInput],
+    });
+    setAchievementInput("");
+  };
+
+  const removeAchievement = (idx) => {
+    const updated = [...form.achievements];
+    updated.splice(idx, 1);
+    setForm({ ...form, achievements: updated });
+  };
+
+  // Add Project
+  const addProject = () => {
+    if (!projectInput.title.trim() || !projectInput.description.trim()) return;
+    setForm({
+      ...form,
+      projects: [...form.projects, projectInput],
+    });
+    setProjectInput({ title: "", description: "" });
+  };
+
+  const removeProject = (idx) => {
+    const updated = [...form.projects];
+    updated.splice(idx, 1);
+    setForm({ ...form, projects: updated });
+  };
 
 
   const handleFileUpload = (e, setImage) => {
@@ -89,10 +112,14 @@ const StudentProfileForm = () => {
     const token = localStorage.getItem("token");
     const formData = new FormData();
 
-    // Append simple text fields
+    // Append fields
     Object.entries(form).forEach(([key, value]) => {
       if (key !== "profileImage" && key !== "coverImage") {
-        formData.append(key, value);
+        if (key === "skills" || key === "achievements" || key === "projects") {
+          formData.append(key, JSON.stringify(value));
+        } else {
+          formData.append(key, value);
+        }
       }
     });
 
@@ -316,6 +343,76 @@ const StudentProfileForm = () => {
                 No skills match your search
               </p>
             )}
+          </div>
+        </div>
+
+        {/* Achievements */}
+        <div>
+          <label className="font-medium">Achievements</label>
+          {form.achievements.length > 0 && (
+            <ul className="list-disc pl-5 mb-3 text-sm space-y-1">
+              {form.achievements.map((ach, idx) => (
+                <li key={idx} className="flex justify-between items-start">
+                  <span>{ach}</span>
+                  <button type="button" onClick={() => removeAchievement(idx)} className="text-red-500 font-bold ml-2">×</button>
+                </li>
+              ))}
+            </ul>
+          )}
+          <div className="flex gap-2">
+            <input
+              type="text"
+              value={achievementInput}
+              onChange={(e) => setAchievementInput(e.target.value)}
+              className="flex-1 p-2 border rounded-lg"
+              placeholder="E.g., Hackathon Winner 2023"
+            />
+            <button
+              type="button"
+              onClick={addAchievement}
+              className="bg-gray-100 px-4 py-2 rounded-lg font-semibold hover:bg-gray-200"
+            >
+              Add
+            </button>
+          </div>
+        </div>
+
+        {/* Featured Projects */}
+        <div>
+          <label className="font-medium">Featured Projects</label>
+          {form.projects.length > 0 && (
+            <div className="mb-4 space-y-3">
+              {form.projects.map((proj, idx) => (
+                <div key={idx} className="border p-3 rounded-lg relative bg-gray-50">
+                  <button type="button" onClick={() => removeProject(idx)} className="absolute top-2 right-2 text-red-500 font-bold text-lg leading-none">×</button>
+                  <h4 className="font-bold text-sm text-gray-800">{proj.title}</h4>
+                  <p className="text-xs text-gray-600 mt-1">{proj.description}</p>
+                </div>
+              ))}
+            </div>
+          )}
+          <div className="space-y-2 border p-3 rounded-lg bg-gray-50">
+            <input
+              type="text"
+              value={projectInput.title}
+              onChange={(e) => setProjectInput({ ...projectInput, title: e.target.value })}
+              className="w-full p-2 border rounded-lg"
+              placeholder="Project Title"
+            />
+            <textarea
+              value={projectInput.description}
+              onChange={(e) => setProjectInput({ ...projectInput, description: e.target.value })}
+              className="w-full p-2 border rounded-lg"
+              placeholder="Project Description"
+              rows={2}
+            />
+            <button
+              type="button"
+              onClick={addProject}
+              className="w-full bg-gray-200 px-4 py-2 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+            >
+              Add Project
+            </button>
           </div>
         </div>
 

@@ -16,7 +16,7 @@ const JobBoard = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
   const role = user?.role?.toLowerCase();
-  const canPost = ["teacher", "alumni"].includes(role);
+  const canPost = ["teacher", "alumni", "admin"].includes(role);
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
