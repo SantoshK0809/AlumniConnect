@@ -16,6 +16,7 @@ import {
   ClipboardDocumentCheckIcon
 } from "@heroicons/react/24/outline";
 import { useAuth } from "../../hooks/useAuth";
+import server from "../../../environment.js";
 
 const AdminProfile = () => {
   const { user } = useAuth();
@@ -51,7 +52,7 @@ const AdminProfile = () => {
     const fetchAdminData = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:4000/api/admin/dashboard", {
+        const res = await axios.get(`${server}/api/admin/dashboard`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         

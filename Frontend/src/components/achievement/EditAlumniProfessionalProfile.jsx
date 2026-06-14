@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import server from "../../../environment.js";
 
 import { useNavigate } from "react-router-dom";
 
@@ -54,7 +55,8 @@ export default function EditAlumniProfessionalProfile() {
       setLoading(true);
 
       const response = await axios.get(
-        "http://localhost:4000/api/alumni/achievements/profile",
+        // "http://localhost:4000/api/alumni/achievements/profile",
+        `${server}/api/alumni/achievements/profile`,
         {
           // withCredentials: true,
           headers: {

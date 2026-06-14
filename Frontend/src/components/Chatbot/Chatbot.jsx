@@ -9,6 +9,7 @@ import {
 } from "@heroicons/react/24/outline";
 import axios from "axios";
 import { useAuth } from "../../hooks/useAuth";
+import server from "../../../environment.js";
 
 const Chatbot = () => {
   const { user } = useAuth();
@@ -40,7 +41,8 @@ const Chatbot = () => {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.post(
-        "http://localhost:4000/api/chatbot/query",
+        // "http://localhost:4000/api/chatbot/query",
+        `${server}/api/chatbot/query`,
         { query },
         {
           headers: { Authorization: `Bearer ${token}` }

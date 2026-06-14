@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import server from "../../../environment.js";
 
 export default function AlumniProfessionalProfile() {
   const [alumniData, setAlumniData] = useState(null);
@@ -16,7 +17,7 @@ export default function AlumniProfessionalProfile() {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:4000/api/alumni/achievements/profile",
+        `${server}/api/alumni/achievements/profile`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

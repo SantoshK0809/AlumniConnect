@@ -1,7 +1,9 @@
 import axios from "axios";
+import server from "../../environment.js";
 
 const API = axios.create({
-  baseURL: "http://localhost:4000/api/notifications",
+  // baseURL: "http://localhost:4000/api/notifications",
+  baseURL: `${server}/api/notifications`,
 });
 
 // Add token to all requests

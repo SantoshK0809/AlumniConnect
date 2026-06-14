@@ -5,6 +5,7 @@ import {
   departmentOptions,
   specializationOptions,
 } from "../../constants/profileOptions";
+import server from "../../../environment.js";
 
 const TeacherProfileForm = () => {
   const { user, login } = useAuth();
@@ -84,7 +85,7 @@ const TeacherProfileForm = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:4000/api/teacher/profile", {
+      const res = await fetch(`${server}/api/teacher/profile`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

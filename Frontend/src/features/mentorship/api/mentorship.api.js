@@ -1,8 +1,8 @@
 import axios from "axios";
+import server from "../../../../environment.js";
 
 const mentorshipAPI = axios.create({
-  baseURL: "http://localhost:4000/api/mentorship-requests",
-
+  baseURL: `${server}/api/mentorship-requests`,
   withCredentials: true,
 });
 

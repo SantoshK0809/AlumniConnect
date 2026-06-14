@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import MentorshipRequestModal from "../../features/mentorship/components/MentorshipRequestModal";
+import server from "../../../environment.js";
 
 const PublicAlumniProfile = () => {
   const { userId } = useParams();
@@ -18,7 +19,7 @@ const PublicAlumniProfile = () => {
         const token = localStorage.getItem("token");
 
         const response = await axios.get(
-          `http://localhost:4000/api/discovery/profile/${userId}`,
+          `${server}/api/discovery/profile/${userId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -70,21 +71,13 @@ const PublicAlumniProfile = () => {
   }
 
   const user = profileData.user || {};
-
   const profile = profileData.profile || {};
-
   const professionalProfile = profileData.professionalProfile || {};
-
   const profileImg = profile?.profileImage?.url;
-
   const education = professionalProfile.education || {};
-
   const experience = professionalProfile.experience || [];
-
   const achievements = professionalProfile.achievements || [];
-
   const skills = professionalProfile.skills || [];
-
   const displayName =
     user.name || user.email?.split("@")[0] || "Unknown Alumni";
 
