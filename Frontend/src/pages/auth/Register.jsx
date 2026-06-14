@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 // import './index.css'
 import { Link } from 'react-router-dom'
 import Header from '../../components/layout/Header'
+import server from '../../../environment.js';
 
 const RegisterPage = () => {
   const [form, setForm] = useState({
@@ -31,7 +32,7 @@ const RegisterPage = () => {
     setStatus(null);
     try {
       const axios = (await import('axios')).default;
-      const res = await axios.post('/api/verify-identity', {
+      const res = await axios.post(`${server}/api/verify-identity`, {
         role: form.role,
         prn_number: form.prn_number,
         emp_id: form.emp_id
@@ -107,7 +108,7 @@ const RegisterPage = () => {
 
       // use axios with proper config
       const axios = (await import('axios')).default;
-      const res = await axios.post('/api/send-registration-otp', payload, {
+      const res = await axios.post(`${server}/api/send-registration-otp`, payload, {
         headers: {
           'Content-Type': 'application/json'
         },
@@ -143,7 +144,7 @@ const RegisterPage = () => {
       }
 
       const axios = (await import('axios')).default;
-      const res = await axios.post('/api/register', payload, {
+      const res = await axios.post(`${server}/api/register`, payload, {
         headers: {
           'Content-Type': 'application/json'
         },

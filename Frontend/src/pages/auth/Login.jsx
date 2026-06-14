@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 import Header from "../../components/layout/Header";
+import server from "../../../environment.js";
 
 const LoginPage = () => {
   const [form, setForm] = useState({
@@ -36,7 +37,7 @@ const LoginPage = () => {
     try {
       const axios = (await import("axios")).default;
 
-      const res = await axios.post("/api/login", form, {
+      const res = await axios.post(`${server}/api/login`, form, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });
