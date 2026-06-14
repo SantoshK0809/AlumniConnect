@@ -16,6 +16,7 @@ import {
 import { useAuth } from "../../hooks/useAuth";
 import axios from "axios";
 import TeacherProfileForm from "./ProfileSetup";
+import server from "../../../environment.js";
 
 const TeacherProfile = ({ externalProfile }) => {
   const { user } = useAuth();
@@ -58,7 +59,7 @@ const TeacherProfile = ({ externalProfile }) => {
       try {
         const token = localStorage.getItem("token");
         const res = await axios.get(
-          "http://localhost:4000/api/teacher/profile",
+          `${server}/api/teacher/profile`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useAuth } from "../../hooks/useAuth";
 import CreatePost from "../../components/ui/CreatePost";
 import FeedPost from "../../components/ui/FeedPost";
+import server from "../../../environment.js";
 
 const Feed = () => {
   const { user } = useAuth();
@@ -10,7 +11,7 @@ const Feed = () => {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/post", {
+      const res = await axios.get(`${server}/api/post`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -27,7 +28,7 @@ const Feed = () => {
 
   const handleCreatePost = async (formData) => {
     try {
-      const res = await axios.post("http://localhost:4000/api/post", formData, {
+      const res = await axios.post(`${server}/api/post`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -44,7 +45,7 @@ const Feed = () => {
 
   const handleDeletePost = async (postId) => {
     try {
-      await axios.delete(`http://localhost:4000/api/post/${postId}`, {
+      await axios.delete(`${server}/api/post/${postId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -59,7 +60,7 @@ const Feed = () => {
   const handleLike = async (postId) => {
     try {
       const res = await axios.post(
-        `http://localhost:4000/api/post/${postId}/like`,
+        `${server}/api/post/${postId}/like`,
         {},
         {
           headers: {
@@ -84,7 +85,7 @@ const Feed = () => {
   const handleComment = async (postId, commentText) => {
     try {
       const res = await axios.post(
-        `http://localhost:4000/api/post/${postId}/comment`,
+        `${server}/api/post/${postId}/comment`,
         { text: commentText },
         {
           headers: {
@@ -111,7 +112,7 @@ const Feed = () => {
   const handleDeleteComment = async (postId, commentId) => {
     try {
       const res = await axios.delete(
-        `http://localhost:4000/api/post/${postId}/comment/${commentId}`,
+        `${server}/api/post/${postId}/comment/${commentId}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

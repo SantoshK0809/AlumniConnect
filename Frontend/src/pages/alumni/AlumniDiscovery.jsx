@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 import { Link } from "react-router-dom";
+import server from "../../../environment.js";
 
 const AlumniDiscovery = () => {
   const [searchParams] = useSearchParams();
@@ -23,7 +24,8 @@ const AlumniDiscovery = () => {
         const token = localStorage.getItem("token");
 
         const response = await axios.get(
-          "http://localhost:4000/api/discovery/search-professional",
+          // "http://localhost:4000/api/discovery/search-professional",
+          `${server}/api/discovery/search-professional`,
           {
             params: {
               search,

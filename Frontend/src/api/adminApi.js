@@ -1,6 +1,8 @@
 import axios from "axios";
+import server from "../../environment.js";
 
-const API_BASE = "http://localhost:4000/api/admin";
+// const API_BASE = "http://localhost:4000/api/admin";
+const API_BASE = `${server}/api/admin`;
 
 function authHeaders() {
   return {

@@ -18,6 +18,7 @@ import {
 import { Card } from '../ui/Card';
 import { useAuth } from '../../hooks/useAuth';
 import axios from 'axios';
+import server from "../../../environment.js";
 
 const RoleDashboard = () => {
   const { user } = useAuth();
@@ -38,14 +39,14 @@ const RoleDashboard = () => {
         const headers = { 'Authorization': `Bearer ${token}` };
 
         // Fetch Dashboard Data
-        const dashboardRes = await axios.get(`http://localhost:4000/api/${role}/dashboard`, { headers });
+        const dashboardRes = await axios.get(`${server}/api/${role}/dashboard`, { headers });
         if (dashboardRes.data && dashboardRes.data.data) {
           setDashboardData(dashboardRes.data.data);
         }
 
         // Fetch Recommendations (Only for Student/Alumni)
         if (role === 'student' || role === 'alumni') {
-          const recRes = await axios.get('http://localhost:4000/api/recommendations', { headers });
+          const recRes = await axios.get(`${server}/api/recommendations`, { headers });
           setProfileRecommendations(recRes.data.profileRecommendations || []);
           setJobRecommendations(recRes.data.jobRecommendations || []);
         }
